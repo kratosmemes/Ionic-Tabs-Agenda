@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div>prueba{{| fechastring}}</div>
+  <br>
+  <ion-title class='title'>Agregar Contactos</ion-title>
+  <br>
+  <ion-item>
+    <ion-label class='lab'>Nombre: </ion-label>
+    <ion-input value={{nombre}} [(ngModel)]=nombre></ion-input>
+  </ion-item>
+  
+  <ion-item>
+  <ion-label class='lab'>Telefono: </ion-label>
+  <ion-input value={{telefono}} [(ngModel)]=telefono></ion-input>
+  </ion-item>
+  
+  <ion-item>
+  <ion-label class='lab'>E-mail: </ion-label>
+  <ion-input value={{email}} [(ngModel)]=email></ion-input>
+  </ion-item>
+  
+  <ion-item>
+  <ion-label class='lab'>Notas: </ion-label>
+  <ion-input value={{notas}} [(ngModel)]=notas></ion-input>
+  </ion-item>
+  
+  <ion-button class='btn' (click)=guardar(nombre,telefono,email,notas)>
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </ion-button>
+</ion-content>
